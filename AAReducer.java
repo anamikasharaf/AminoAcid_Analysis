@@ -10,12 +10,12 @@ public class AAReducer  extends Reducer <Text,Text,Text,Text> {
     public void reduce(Text key, Iterable<Text> values, Context context) 
 		   throws IOException, InterruptedException {
         
-        // TODO: initialize integer sums for each reading frame
+        // initialize integer sums for each reading frame
     	int frame1_sum = 0;
     	int frame2_sum = 0;
     	int frame3_sum = 0;
         
-        // TODO: loop through Iterable values and increment sums for each reading frame
+        // loop through Iterable values and increment sums for each reading frame
     	String[] valarray;
     	String valstring;
     	for(Text val : values)
@@ -36,9 +36,7 @@ public class AAReducer  extends Reducer <Text,Text,Text,Text> {
     		}
     	}
        
-        // TODO: write the (key, value) pair to the context
-    	
-        // TODO: consider how to use tabs to format output correctly
+        // write the (key, value) pair to the context
     	
     	String finalvalue = Integer.toString(frame1_sum) + " " + Integer.toString(frame2_sum) + " " + frame3_sum;
     	if(key.toString().length() <= 7)
