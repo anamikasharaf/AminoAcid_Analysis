@@ -59,16 +59,16 @@ public class AAMapper  extends Mapper <LongWritable,Text,Text,Text> {
     public void map(LongWritable key, Text value, Context context) throws IOException, 
         InterruptedException {
     	
-        // TODO declare String variable for Text value
+        // declare String variable for Text value
     	String text = value.toString();
         
-        // TODO: declare and initialize variables for tokens of each of 3 reading frames
+        // declare and initialize variables for tokens of each of 3 reading frames
     	StringTokenizer st1 = new StringTokenizer(text, "\n");
     	StringTokenizer st2 = new StringTokenizer(text.substring(1), "\n");
     	StringTokenizer st3 = new StringTokenizer(text.substring(2), "\n");
     	
   
-        // TODO: read, process, and write reading frame 1
+        // read, process, and write reading frame 1
         // TCA GCC TTT TCT TTG ACC TCT TCT TTC TGT TCA TGT GTA TTT GCT GTC TCT TAG CCC AGA
         // does TCA exist in codon2aaMap?
         // if so, write (key, value) pair to context   
@@ -90,7 +90,7 @@ public class AAMapper  extends Mapper <LongWritable,Text,Text,Text> {
     	}
     	
 
-        // TODO: read, process, and write reading frame 2
+        // read, process, and write reading frame 2
         // T CAG CCT TTT CTT TGA CCT CTT CTT TCT GTT CAT GTG TAT TTG CTG TCT CTT AGC CCA GA
         // does CAG exist in codon2aaMap?
         // if so, write (key, value) pair to context 
@@ -109,7 +109,7 @@ public class AAMapper  extends Mapper <LongWritable,Text,Text,Text> {
     		}
     	}
         
-        // TODO: read, process, and write reading frame 3
+        // read, process, and write reading frame 3
         // TC AGC CTT TTC TTT GAC CTC TTC TTT CTG TTC ATG TGT ATT TGC TGT CTC TTA GCC CAG A
         // does AGC exist in codon2aaMap?
         // if so, write (key, value) pair to context 
