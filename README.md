@@ -2,11 +2,11 @@
 
 Using MapReduce to find out frequency of each amino acid in FASTA file.
 
-# Objective
+### Objective
 
 Write a MapReduce program (including a driver, mapper, and reducer) that counts the frequency of each amino acid (and start and stop codons) in a given FASTA file for each of the 3 reading frames.
 
-# Data
+### Data
 
 Concept of a reading frame can be found here -> https://en.wikipedia.org/wiki/Reading_frame  
 
@@ -20,11 +20,11 @@ AG GTG ACA CCG CAA GCC TTA TAT TAG C
 
 codon2aa.txt file is in the repository
 
-## Mapper
+### Mapper
 
 Mapper maps protein found (refer: condon2aa.txt ) in all three frames for a sequence. 
 
-## Reducer
+### Reducer
 
 Reducer counts the total number of presence of each protein in all three frames.
 
